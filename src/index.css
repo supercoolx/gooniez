@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: 'Phonk';
+  src: url('/fonts/phonk.otf');
+}
+
+body {
+  background-color: black;
+  color: white;
+}
