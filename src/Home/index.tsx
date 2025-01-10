@@ -7,7 +7,7 @@ import Slide from "./Slide";
 
 const Home = () => {
   return (
-    <div className="">
+    <div>
       <Header />
 
       <Overview />
