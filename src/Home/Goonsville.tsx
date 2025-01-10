@@ -41,12 +41,12 @@ const responsiveSetting = [
   },
 ];
 
-const prevArrow = <button className="flex items-center justify-center p-2 bg-white rounded-full opacity-30 hover:opacity-100">
-  <img src="/imgs/arrow.png" className="w-5 h-5 rotate-180" alt="" />
+const prevArrow = <button className="flex items-center justify-center p-4 transition-opacity duration-300 bg-white rounded-full opacity-20 hover:opacity-100">
+  <img src="/imgs/arrow.png" className="w-8 h-8 rotate-180" alt="" />
 </button>;
 
-const nextArrow = <button className="flex items-center justify-center p-2 bg-white rounded-full opacity-30 hover:opacity-100">
-<img src="/imgs/arrow.png" className="w-5 h-5" alt="" />
+const nextArrow = <button className="flex items-center justify-center p-4 transition-opacity duration-300 bg-white rounded-full opacity-20 hover:opacity-100">
+<img src="/imgs/arrow.png" className="w-8 h-8" alt="" />
 </button>;
 
 const Goonsville = () => {
