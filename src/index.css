@@ -11,3 +11,7 @@ body {
   background-color: black;
   color: white;
 }
+
+.page-container {
+  @apply mx-auto max-w-7xl px-[11px] md:px-7;
+}
