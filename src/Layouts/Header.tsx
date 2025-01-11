@@ -8,8 +8,11 @@ const address = "Fr7Y3MsPTsdoOIR987uufnHE0fhsFweHE";
 const Header = () => {
   const { scrollYProgress } = useScroll();
   const [showHeader, setShowHeader] = useState(false);
+  const [isTop, setIsTop] = useState(true);
 
   useScrollPosition(({ prevPos, currPos }) => {
+    console.log(prevPos.y, currPos.y);
+    setIsTop(window.scrollY === 0);
     setShowHeader(currPos.y < prevPos.y);
   });
 
@@ -25,7 +28,7 @@ const Header = () => {
   return (
     <div className="relative w-full">
       <motion.div className="h-[2px] z-[9] fixed top-0 origin-left w-full bg-white" style={{ scaleX: scrollYProgress }} />
-      <div className={`w-full px-[11px] md:px-7 z-10 fixed top-[2px] transition-transform duration-300 ${showHeader ? 'lg:-translate-y-full' : 'translate-y-0'}`}>
+      <div className={`w-full px-[11px] md:px-7 z-10 fixed top-[2px] transition-transform duration-300 ${!isTop && showHeader ? '-translate-y-full' : 'translate-y-0'}`}>
         <div className={`page-container w-full flex items-center justify-between py-[11px] lg:py-7`}>
           <div className="flex items-center gap-6">
             <motion.a initial={{ scale: 0 }} animate={{ scale: 1 }} whileHover={{ scale: 1.2 }} whileTap={{ scale: 0.8 }} href="#">
@@ -58,7 +61,7 @@ const Header = () => {
           </div>
         </div>
       </div>
-      <div className={`w-full px-[11px] md:px-7 z-10 fixed block lg:hidden transition-[top] duration-300 ${showHeader ? 'top-3' : '-top-16'}`}>
+      <div className={`w-full px-[11px] md:px-7 z-10 fixed block lg:hidden transition-[top] duration-300 ${!isTop && showHeader ? 'top-3' : '-top-16'}`}>
         <div className="px-5 sm:px-8 md:px-16 py-3 bg-[#191919] rounded-[17px] flex justify-between">
           <motion.a initial={{ scale: 0 }} animate={{ scale: 1 }} whileHover={{ scale: 1.2 }} whileTap={{ scale: 0.8 }} href="#">
             <img src="/imgs/dexscreener.png" alt="" className="w-[25px]" />
