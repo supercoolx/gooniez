@@ -6,7 +6,7 @@ import { toast } from "react-toastify";
 const address = "Fr7Y3MsPTsdoOIR987uufnHE0fhsFweHE";
 
 const Header = () => {
-  const { scrollY, scrollYProgress } = useScroll();
+  const { scrollYProgress } = useScroll();
   const [showHeader, setShowHeader] = useState(false);
 
   useScrollPosition(({ prevPos, currPos }) => {
@@ -25,7 +25,7 @@ const Header = () => {
   return (
     <div className="relative w-full">
       <motion.div className="h-[2px] z-[9] fixed top-0 origin-left w-full bg-white" style={{ scaleX: scrollYProgress }} />
-      <div className={`w-full px-[11px] md:px-7 z-10 fixed top-[2px] transition-transform duration-300 ${scrollY.get() === 0 || showHeader ? '-translate-y-full' : 'translate-y-0'}`}>
+      <div className={`w-full px-[11px] md:px-7 z-10 fixed top-[2px] transition-transform duration-300 ${showHeader ? 'lg:-translate-y-full' : 'translate-y-0'}`}>
         <div className={`page-container w-full flex items-center justify-between py-[11px] lg:py-7`}>
           <div className="flex items-center gap-6">
             <motion.a initial={{ scale: 0 }} animate={{ scale: 1 }} whileHover={{ scale: 1.2 }} whileTap={{ scale: 0.8 }} href="#">
