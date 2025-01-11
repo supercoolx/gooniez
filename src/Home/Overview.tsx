@@ -2,7 +2,7 @@ import { motion } from "motion/react";
 
 const Overview = () => {
   return (
-    <div className="mt-16 space-y-1 sm:space-y-5 md:space-y-10 page-container md:mt-52">
+    <div className="space-y-1 mt-36 sm:space-y-5 md:space-y-10 page-container md:mt-72">
       <motion.div initial={{ scale: 0 }} animate={{ scale: 1 }} className="flex justify-center scale-0">
         <img src="/imgs/gang.png" alt="" className="w-[1243px]" />
       </motion.div>
