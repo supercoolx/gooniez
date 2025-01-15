@@ -10,8 +10,8 @@ export default {
         phonk: ['Phonk', 'sans-serif'],
       },
       animation: {
-        slide: 'slide 8s linear infinite',
-        'slide-reverse': 'slide-reverse 8s linear infinite',
+        slide: 'slide 4s linear infinite',
+        'slide-reverse': 'slide-reverse 4s linear infinite',
       },
       keyframes: {
         slide: {
