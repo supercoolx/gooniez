@@ -53,7 +53,7 @@ const Goonsville = () => {
   return (
     <div className="page-container mt-28 sm:mt-40 md:mt-56 space-y-[42px] sm:space-y-20 md:space-y-[120px]">
       <div className="text-[32px] sm:text-[40px] md:text-5xl text-center font-phonk">GOONSVILLE</div>
-      <Slide slidesToShow={1} slidesToScroll={1} responsive={responsiveSetting} prevArrow={prevArrow} nextArrow={nextArrow}>
+      <Slide slidesToShow={1} slidesToScroll={1} responsive={responsiveSetting} prevArrow={prevArrow} nextArrow={nextArrow} transitionDuration={300} duration={4000}>
         {
           images.map((image, key) => <div key={key} className="flex items-end rounded-[20px] overflow-hidden h-[257px] lg:h-[452px] bg-cover bg-center mx-[6px] sm:mx-[10px]" style={{ backgroundImage: `url('${image.src}')` }}>
             <div className="h-20 lg:h-[140px] bg-black/60 w-full flex items-center justify-center">
