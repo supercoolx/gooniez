@@ -4,6 +4,7 @@ import Goonsville from "./Goonsville";
 import Overview from "./Overview";
 import Team from "./Team";
 import Slide from "./Slide";
+import Story from "./Story";
 
 const Home = () => {
   return (
@@ -12,8 +13,9 @@ const Home = () => {
 
       <Overview />
       <Goonsville />
-      <Team />
+      <Story />
       <Slide />
+      <Team />
 
       <Footer />
     </div>
